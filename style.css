@@ -77,12 +77,10 @@
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+    :hover {
+      color: #0af;
+    }
   }
-  
-  header nav a:hover {
-    color: #0af;
-  }
-  
   /* ===== HERO SECTION ===== */
   .hero-image {
     margin-top: -80px;
@@ -276,7 +274,7 @@
     font-weight: 900;
     font-size: 26px;
     color: #000;
-    padding: 17px 8.8vw;
+    padding: 26px 8vw;
     border-radius: 12px;
     border: none;
     cursor: pointer;
@@ -483,19 +481,105 @@
   
   /* ===== FOOTER ===== */
   footer {
-    background-color: #000;
+    background-color: #222222;
     color: #aaa;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    flex-direction: row;
     align-items: center;
     padding: 2rem;
     gap: 1rem;
     font-size: 0.9rem;
   }
   
-  .footer-nav,
-  .footer-right {
+  .footer-up{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5vw;
+  }
+
+  .footer-header a, li {
+    list-style: none;
+    text-decoration: none;
+    color: #ccc;
+    :hover {
+      color: #0af;
+    }
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    font-size: 21px;
+    padding: 2vw;
+    justify-content: center;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    @media (max-width: 560px) {
+      gap: 19px;
+      font-size: 15px;
+    }
+  }
+
+  .icons {
+    @media (max-width:440px) {
+      max-width: 91px;
+    }
+  }
+
+  .icons img {
+    margin: 0 0.3vw;
+    cursor: pointer;
+    @media (max-width:900px) {
+      width: 20px;
+    }
+    
+  }
+
+  .footer-up h1 {
+    font-size: 30px;
+    @media (max-width: 900px) {
+      font-size: 14px;
+    }
+    @media (max-width:440px) {
+      max-width: 76px;
+    }
+  }
+
+  .footer-up button:hover{
+    background-color: #0af;
+  }
+
+  .footer-up button{
+    background-color: #FFFFFF;
+    font-weight: 900;
+    font-size: 19px;
+    padding: 26px 31px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 12px;
+
+
+    @media (max-width:1200px) {
+      font-size: 13px; 
+      padding: 20px 25px;
+    }
+
+
+    @media (max-width:560px) {
+      font-size: 12px;
+      padding: 6px 13px;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  .footer-down {
+    display: flex;
+    justify-content: space-between;
     gap: 1rem;
   }
   
@@ -508,28 +592,4 @@
     color: #fff;
   }
   
-  /* ===== MEDIA QUERIES ===== */
-  /* @media (min-width: 768px) {
 
-    .hero-text {
-      width: 50%;
-    }
-    .features {
-      flex-direction: row;
-      justify-content: space-around;
-      text-align: left;
-    }
-  
-    .contact-form {
-      flex-direction: row;
-    }
-  
-    .form-left{
-      max-width: 50%;
-    }
-  
-    footer {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  } */
